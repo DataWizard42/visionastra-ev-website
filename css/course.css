@@ -1,0 +1,378 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inika", serif;
+}
+
+#navbar-placeholder{
+    /* height: 80px; */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px 60px 0px 25px;
+    height: 80px;
+}
+
+.logo img {
+    margin-left: 10px;
+    height: 80px;
+}
+
+.nav-links {
+    gap: 5px;
+    font-weight: 400px;
+    height: 441;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 400px;
+    margin-right: -50px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+.auth-buttons {
+    display: flex;
+    margin: 0px 0px 0px 0px;
+    font-family: inherit;
+}
+
+.auth-buttons .login-btn,
+.auth-buttons .signup-btn {
+    background-color: #247329;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 2.3px;
+}
+
+.auth-buttons .signup-btn {
+    background-color: #000000;
+    margin-left: 10px;
+}
+
+.auth-buttons .login-btn:hover,
+.auth-buttons .signup-btn:hover {
+    background-color: #777;
+}
+
+.bgban {
+    display: flex;
+    flex-direction: column;
+    height: 435px;
+    width: 100%;
+    background: 
+        linear-gradient(265.72deg, rgba(69, 162, 67, 0.55) 3.67%, rgba(75, 165, 71, 0.604317) 31.94%, rgba(57, 184, 123, 0.8) 54.39%, rgba(103, 177, 91, 0.85) 86.99%),
+        url('courseImg/banner.png') no-repeat center center/cover;
+}
+
+.bgban h1 {
+    font-size: 60px;
+}
+
+.bgban h2 {
+    font-size: 40px;
+    margin: 0px 40px;
+}
+
+.bgban h3 {
+    font-size: 25px;
+    margin-top: 4px;
+}
+
+.bgban h1,
+.bgban h2,
+.bgban h3 {
+    margin-left: 40px;
+}
+
+.bgban h1,
+.bgban h3 {
+    color: white;
+}
+
+.bansec {
+    margin: 40px 40px;
+    display: flex;
+    height: 700px;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.course-card img {
+    height: 400px;
+    width: 70%;
+    flex: 1;
+}
+
+.course-details {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 0px;
+    flex-grow: 2;
+}
+
+.course-title {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex: 2;
+}
+
+.course-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: #ffcc00;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.course-price {
+    color: rgb(109, 8, 8);
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    margin-top: 3px;
+}
+
+.secbutton {
+    margin-top: -1px;
+}
+
+.detailsbutton {
+    border: solid 2px black;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: white;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.labbutton {
+    border: solid 2px rgb(0, 0, 0);
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bgban h1 {
+        font-size: 40px;
+    }
+
+    .bgban h2 {
+        font-size: 30px;
+    }
+
+    .bgban h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bgban h1 {
+        font-size: 30px;
+    }
+
+    .bgban h2 {
+        font-size: 20px;
+    }
+
+    .bgban h3 {
+        font-size: 16px;
+    }
+
+    .bansec {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .course-card img {
+        width: 100%;
+    }
+
+    .course-details {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .bgban h1 {
+        font-size: 25px;
+    }
+
+    .bgban h2 {
+        font-size: 18px;
+    }
+
+    .bgban h3 {
+        font-size: 14px;
+    }
+
+    .bansec {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .course-card img {
+        width: 100%;
+    }
+
+    .course-details {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+
+
+
+/* gallerylab css */
+
+.bgpage{
+    background: linear-gradient(to bottom, rgb(176, 176, 176), black);
+    height: 100vh;
+}
+
+
+
+.bgpage h1{
+    text-align: center;
+    padding-top: 40px;
+    margin: 0px 0px;
+}
+
+.bgpage h3{
+    text-align: center;
+    margin: 0px 0px;
+    padding-top: 20px;
+  
+}
+
+.labimg{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 20px;
+    margin: 80px;
+    margin-top: 40px;
+
+}
+
+.labimg img{
+    width: 30%;
+    height: auto;
+
+}
+
+
+/* footer */
+#footer-placeholder{
+    height: fit-content;
+}
