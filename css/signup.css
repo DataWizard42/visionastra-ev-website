@@ -6,7 +6,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('C:\Users\vmane\Desktop\vision-astra\images\image 9.png') no-repeat center center fixed; /* Replace with your background image */
+  background: url('image\image 9.png') no-repeat center center fixed; /* Replace with your background image */
   background-size: cover;
 }
 
