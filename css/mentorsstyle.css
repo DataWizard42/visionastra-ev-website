@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+header {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+    padding:  0;  
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 70px;
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left:120px;
+    padding: 0;
+}
+.links-box{
+    margin-left: 370px;
+}
+
+.nav-links li {
+    margin : 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ee3e12; 
+    border-bottom: 2px solid #ee491f; 
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-buttons .signup {
+    background-color: black;
+}
+
+
+.auth-buttons button:hover {
+    background: linear-gradient(45deg, #bc3817, #e38034); 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.profile {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile .title {
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons a img {
+    width: 30px;
+    height: 30px;
+}
