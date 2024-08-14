@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Adjust based on the height of your header */
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it sits above other content */
+    padding:  0; /* Optional: Add padding to adjust height */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left:120px;
+    padding: 0;
+   
+}
+.links-box{
+    margin-left: 470px;
+}
+
+.nav-links li {
+    margin : 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ee3e12; /* Change to your desired hover color */
+    border-bottom: 2px solid #ee491f; /* Add an underline effect */
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-buttons .signup {
+    background-color: black;
+}
+
+
+.auth-buttons button:hover {
+    background: linear-gradient(45deg, #bc3817, #e38034); /* Adjust as needed */
+    transform: translateY(-3px); /* Creates a lifting effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+
+main {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px; /* Add padding for content */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden; /* Ensure content does not overflow */
+    height: 50vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; /* Text color */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure it matches the height of the background image */
+    text-align: left;
+    background: rgba(0, 0, 0, 0.8); /* Black glass panel effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white; /* White text color */
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    margin: 0 0 10px; 
+    
+}
+.h1-box{
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+
+
+.hero-text p {
+    font-size: 1.2rem; /* Adjust font size */
+    margin: 0;
+}
+
+.recruiters {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.recruiters h2 {
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 20px;
+    color: black; /* Text color */
+}
+
+.recruiter-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px; /* Space between logos */
+}
+
+.recruiter-logos img {
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgb(197, 177, 177);
+  }
+  
+  .recruiter-logos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Styles for tablets and small laptops */
+    .nav-links {
+        margin-left: 0; /* Remove margin for better alignment */
+    }
+    .links-box{
+        margin-left: 370px;
+    }
+
+    .hero-text {
+        width: 90%; /* Increase width for smaller screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Adjust font size for tablets */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Adjust font size for tablets */
+    }
+}
+@media (max-width: 768px) {
+    /* Adjust breakpoint as needed */
+    .nav-links {
+      display: none; /* Hide the navigation links on smaller screens */
+    }
+    .auth-buttons {
+      display: flex; /* Ensure buttons are displayed as a flex container */
+      justify-content: flex-end; /* Align buttons to the right */
+    }
+  }
+
