@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Set the background color to match the dark section */
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    height: 70px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.auth-buttons .login {
+    background-color: #1a1a1a;
+}
+
+.values-section {
+    text-align: center;
+    padding: 50px 10px; /* Increased padding to add more space above and below */
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.values-section h1 {
+    font-size: 50px; /* Increased font size */
+    margin-bottom: -100px; /* Overlaps with the boxes below */
+    z-index: 1;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.value-box {
+    background-color: #012611;
+    padding: 40px;
+    width: 22%;
+    border-radius: 10px;
+    color: white;
+    min-height: 700px; /* Further increased height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.value-box h2 {
+    font-size: 140px; /* Increased font size */
+    margin-bottom: 20px;
+    margin-top: -40px; /* Move letters up slightly */
+}
+
+.value-box h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.value-box p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.value-box img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 20px; /* Adjusted image position */
+}
+
+.value-box:nth-child(2) {
+    background-color: #014017;
+}
+
+.value-box:nth-child(3) {
+    background-color: #4cae4c;
+}
+
+.value-box:nth-child(4) {
+    background-color: #449d44;
+}
+
+/* Ensuring no white space at the bottom */
+body, html {
+    height: 100%;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
