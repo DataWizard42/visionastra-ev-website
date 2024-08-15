@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav .signup {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.course-overview {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-overview img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.course-details {
+    padding: 20px;
+}
+
+.course-details h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.course-details p {
+    margin: 10px 0;
+}
+
+.price-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-box h2 {
+    font-size: 36px;
+    margin: 0;
+    color: #4CAF50;
+}
+
+.price-box p {
+    margin: 10px 0;
+}
+
+.price-box .register {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.requirements, .includes, .description, .course-content, .instructors {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.requirements h3, .includes h3, .description h3, .course-content h3, .instructors h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.requirements ul, .includes ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.course-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-content ul li {
+    margin-bottom: 10px;
+}
+
+.course-content .view-more {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.instructors .instructor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.instructors .instructor img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.instructors .instructor-details h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.instructors .instructor-details p {
+    margin: 5px 0;
+}
