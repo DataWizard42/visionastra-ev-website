@@ -29,7 +29,7 @@ main {
 .course-details h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #007bff;
+    color: green;
 }
 
 .course-details p {
@@ -44,12 +44,12 @@ main {
 }
 
 .batch-timings span {
-    color: #007bff;
+    color: green;
 }
 
 .contact-us {
     padding: 12px 20px;
-    background-color: #007bff;
+    background-color: green;
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -61,7 +61,7 @@ main {
 }
 
 .contact-us:hover {
-    background: linear-gradient(135deg, #0056b3, #007bff);
+    background: linear-gradient(135deg, #0056b3, green);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
@@ -103,13 +103,13 @@ main {
 
 .offer-end, .course-type {
     font-weight: bold;
-    color: #007bff;
+    color: green;
 }
 
 .register-course {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #007bff;
+    background-color: green;
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -121,7 +121,7 @@ main {
 }
 
 .register-course:hover {
-    background: linear-gradient(135deg, #0056b3, #007bff);
+    background: linear-gradient(135deg, #0056b3, green);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
@@ -143,7 +143,7 @@ main {
 .learning-outcomes h2 {
     margin-bottom: 20px;
     font-size: 2em;
-    color: #007bff;
+    color: green;
 }
 
 .learning-outcomes ul {
@@ -179,7 +179,7 @@ main {
 .requirements-box h2 {
     margin-bottom: 10px;
     font-size: 2em;
-    color: #007bff;
+    color: green;
 }
 
 .requirements-box ul {
@@ -213,7 +213,7 @@ main {
 .inclusions-box h2 {
     margin-bottom: 10px;
     font-size: 2em;
-    color: #007bff;
+    color: green;
 }
 
 .inclusions-box ul {
@@ -249,7 +249,7 @@ main {
 .course-content h2 {
     text-align: center;
     font-size: 2em;
-    color: #007bff;
+    color: green;
     margin-bottom: 20px;
 }
 
@@ -266,7 +266,7 @@ main {
 }
 
 .course-content th {
-    background-color: #007bff;
+    background-color: green;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
@@ -277,7 +277,7 @@ main {
 }
 
 .course-content td:first-child {
-    color: #007bff;
+    color: green;
     font-weight: bold;
     
 }
@@ -314,7 +314,7 @@ main {
         flex-basis: 50%;
         text-align: left;
         font-weight: bold;
-        color: #007bff;
+        color: green;
     }
 
     .course-content td:last-child {
@@ -333,7 +333,7 @@ main {
 
 .instructors h2 {
     text-align: center;
-    color: #007bff;
+    color: green;
     font-size: 2.5em;
     margin-bottom: 30px;
 }
@@ -369,7 +369,7 @@ main {
 
 .instructor-details {
     padding: 20px;
-    background-color: #007bff;
+    background-color: green;
     color: #ffffff;
 }
 
