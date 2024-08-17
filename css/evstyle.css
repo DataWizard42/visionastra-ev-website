@@ -55,6 +55,9 @@ header {
     margin-top: 10px;
 }
 
+
+
+
 .hero h1 {
     font-size: 6em;
     font-weight: 500;
@@ -127,4 +130,57 @@ header {
 /* Style the thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgb(4, 38, 4); /* Darker color on hover */
+}
+
+
+/* Default font sizes (for larger screens) */
+.hero h1 {
+    font-size: 6em;
+}
+
+.hero p {
+    font-size: 1.9em;
+}
+
+.hero .smallpara {
+    font-size: 22px;
+}
+
+/* For tablets (width <= 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4em;
+    }
+    .hero span{
+     font-size: 4em;
+    }
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    .hero .smallpara {
+        font-size: 18px;
+    }
+}
+
+
+.asteril{
+
+}
+/* For mobile devices (width <= 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero h1 span{
+        font-size: 2em;
+       }
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .hero .smallpara {
+        font-size: 16px;
+        margin: 20px 10px; /* Adjust margin for smaller screens */
+    }
 }
