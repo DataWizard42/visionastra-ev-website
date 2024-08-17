@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "u707137586_24T1_EV_Reg";
-$password = "g0OBDd9S";
-$dbname = "u707137586_2024_EV_RegT1";
+$username = "u707137586_EV_Reg_T1_24";
+$password = "DMKL0IYoP&4";
+$dbname = "u707137586_EV_Reg_2024_T1";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -42,13 +42,14 @@ $goals = $_POST['goals'];
 $resume = file_get_contents($_FILES['resume']['tmp_name']);
 $resume_filename = $_FILES['resume']['name'];
 
-$stmt = $conn->prepare("INSERT INTO applications (name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, confirmationEmailSent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'false')");
-$stmt->bind_param("sssssssss", $name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals);
+$stmt = $conn->prepare("INSERT INTO applications (name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, confirmationEmailSent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'false')");
+$stmt->bind_param("ssssssssss", $name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals);
 
 if ($stmt->execute()) {
     echo "Application submitted successfully!";
 } else {
-    echo "Error: " . $stmt->error;
+    error_log("Error: " . $stmt->error);
+    echo "Error: Something went wrong!";
 }
 
 $stmt->close();
