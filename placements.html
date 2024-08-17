@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Astraa Placement Portal</title>
     <link rel="stylesheet" href="css/placements.css">
 </head>
+
 <body>
     <header>
-        <nav>
+        <!-- <nav>
             <div class="logo">
                 <img src="image/EV_logo.jpg" alt="Vision Astraa Logo">
             </div>
@@ -25,14 +27,20 @@
                 <a href="login.html"><button class="login">Login</button></a>
                 <a href="signup.html"><button class="signup">Sign up</button></a>
             </div>
-        </nav>
+        </nav> -->
+
+        <div id="navbar-placeholder"></div>
     </header>
     <main>
         <section class="hero">
             <img src="image/placement_image.png" alt="Background Image">
             <div class="hero-text">
-                <div class = "h1-box"><h1>Launch Your Career with the Perfect </br>Opportunity</h1> <br>
-                <p>Welcome to our Placement Portal! Here, students can explore a wide range of companies, discover exciting career <br>opportunities, and apply directly to the roles that align with their aspirations. Start your journey to professional success <br>with us today!</p></div>
+                <div class="h1-box">
+                    <h1>Launch Your Career with the Perfect </br>Opportunity</h1> <br>
+                    <p>Welcome to our Placement Portal! Here, students can explore a wide range of companies, discover
+                        exciting career <br>opportunities, and apply directly to the roles that align with their
+                        aspirations. Start your journey to professional success <br>with us today!</p>
+                </div>
             </div>
         </section>
         <section class="recruiters">
@@ -48,5 +56,15 @@
             </div>
         </section>
     </main>
+
+    <script>
+        fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
+
 </html>
