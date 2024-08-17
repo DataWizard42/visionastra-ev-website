@@ -141,3 +141,59 @@ h1 {
     width: 30px;
     height: 30px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .auth-buttons .login,
+    .auth-buttons .signup {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .profile h2 {
+        font-size: 16px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+}
