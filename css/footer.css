@@ -7,13 +7,17 @@ body {
   font-family: "Inika", serif;
 }
 
-
+.container{
+  padding-top: 35px;
+  margin-top: 35px;
+}
 
 .site-footer
 {
   background-color:#1F5E1F;
-  padding:45px 0 20px;
+  padding:100px 0 20px;
   font-size:15px;
+  margin-top: 30px;
   line-height:24px;
   color:#ffffff;
 }
