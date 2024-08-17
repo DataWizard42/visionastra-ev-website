@@ -18,11 +18,7 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .logo {
     font-size: 1.8em;

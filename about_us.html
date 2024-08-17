@@ -7,13 +7,16 @@
     <title>EV Academy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/about_us.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <main>
+
+        <header>
+            <div id="navbar-placeholder"></div>
+        </header>
         <section class="about-us">
             <div class="background">
                 <img src="image/about_us_bg.png" alt="Background Image">
@@ -184,6 +187,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
 
 </html>

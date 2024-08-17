@@ -11,7 +11,11 @@ body {
     padding-top: 60px; /* Adjust based on the height of your header */
 }
 
-
+header {
+    background-color: #fff;
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
 
 .about-us {
     position: relative;
