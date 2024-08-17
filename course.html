@@ -1,22 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EV Software and Control Systems</title>
     <link rel="stylesheet" href="css/course.css">
 </head>
+
 <body>
+
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
     <main>
         <section class="course-info">
             <div class="course-details">
                 <h1>Electric Vehicle Mastery Program</h1>
-                <p>This course provides a comprehensive overview of electric vehicle technology and the automotive industry. You will gain hands-on experience in designing, developing, and optimizing EV powertrains. Through in-depth study of battery systems, power electronics, and motor control, you will develop the skills necessary to excel in the emerging EV market. This program combines technical expertise with career preparation, equipping you for success in the automotive industry.</p>
+                <p>This course provides a comprehensive overview of electric vehicle technology and the automotive
+                    industry. You will gain hands-on experience in designing, developing, and optimizing EV powertrains.
+                    Through in-depth study of battery systems, power electronics, and motor control, you will develop
+                    the skills necessary to excel in the emerging EV market. This program combines technical expertise
+                    with career preparation, equipping you for success in the automotive industry.</p>
                 <p class="batch-timings">
                     <b>Course Schedule:</b>
                     <span>
-                    Weekdays: 9:00 AM - 4:30 PM | Saturday: External Mentorship & Project Work
+                        Weekdays: 9:00 AM - 4:30 PM | Saturday: External Mentorship & Project Work
                     </span>
                 </p>
                 <button class="contact-us">Contact Us</button>
@@ -37,9 +46,12 @@
                 <h2>Learning Outcomes</h2>
                 <ul>
                     <li><b>Master the fundamentals</b> of electric vehicle technology and the automotive industry.</li>
-                    <li><b>Develop expertise</b> in EV powertrain design and development, including modeling, simulation, and component selection.</li>
-                    <li><b>Acquire practical skills</b> in battery management, power electronics, and electric machine control for optimal EV performance and efficiency.</li>
-                    <li><b>Prepare for a successful career</b> in the EV industry through hands-on projects, industry-relevant training, and career development support.</li>
+                    <li><b>Develop expertise</b> in EV powertrain design and development, including modeling,
+                        simulation, and component selection.</li>
+                    <li><b>Acquire practical skills</b> in battery management, power electronics, and electric machine
+                        control for optimal EV performance and efficiency.</li>
+                    <li><b>Prepare for a successful career</b> in the EV industry through hands-on projects,
+                        industry-relevant training, and career development support.</li>
                 </ul>
             </div>
         </section>
@@ -63,11 +75,11 @@
                     <li>Resume Preparation & Mock Interviews (Week 13)</li>
                     <li>Group Discussion & Individual Presentation (Week 14)</li>
                     <li>Final Project Demo (Week 15)</li>
-                    <li>Final Placement Drives (Weeks 15 to 16)</li>   
+                    <li>Final Placement Drives (Weeks 15 to 16)</li>
                 </ul>
             </div>
         </section>
-        
+
 
         <section class="course-content">
             <h2>Course Content</h2>
@@ -168,5 +180,14 @@
             </div>
         </section>
     </main>
+    <script>
+        fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
+
 </html>
