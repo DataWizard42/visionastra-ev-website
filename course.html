@@ -10,7 +10,9 @@
 </head>
 
 <body>
-
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
     <div id="navbar-placeholder"></div>
 
     <div>
@@ -41,7 +43,7 @@
                         <p class="course-seats" style="font-weight: 500; margin-top: 2px;">35 seats left</p>
                     </div>
                     <div class="secbutton">
-                         <a href="view-more.html"><button class="detailsbutton">View Details</button></a>
+                        <a href="view-more.html"><button class="detailsbutton">View Details</button></a>
                         <a href="labGAllery.html"><button class="labbutton" type="button">Lab Gallery</button></a>
                     </div>
 
@@ -52,16 +54,16 @@
 
     </div>
 
-    <!-- <script>
+    <script>
         // Load the navbar.html file into the div with id="navbar-placeholder"
-        fetch('navbar.html')
+        fetch('navbarcomp/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
             });
 
 
-    </script> -->
+    </script>
 </body>
 
 

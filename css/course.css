@@ -11,6 +11,12 @@ body {
 #navbar-placeholder{
     /* height: 80px; */
 }
+
+header {
+    background-color: #fff;
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
