@@ -89,7 +89,7 @@
         function showConfirmation() {
             alert("Your application has been submitted successfully!");
         }
-        
+
         function validateForm() {
             const resumeInput = document.getElementById('resume');
             const file = resumeInput.files[0];
@@ -120,12 +120,8 @@
 
     <div class="form-container">
         <h1>Apply Now!</h1>
-        
-        
-        <form id="applicationForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm(); showConfirmation();">
-            <!-- Replace with your actual Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="b961fb0a-8d2b-4b51-b67e-3270e22c5809">
-            
+
+        <form id="applicationForm" action="php/submit_application.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm(); showConfirmation();">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
 
