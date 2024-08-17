@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
   <!-- <nav class="navbar">
       <div class="logo">
@@ -41,48 +39,37 @@
       wish to collaborate with us, please don't hesitate to reach out.
     </p>
   </div>
-
   <div class="main">
     <div class="info">
       <p>Contact Information</p>
-
       <div class="contact">
         <span class="data"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91-8197355166</span>
-
         <span class="data"><i class="fa-solid fa-envelope"></i>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onedream@visionastra.com</span>
-
-        <span class="data"><i class="fa-solid fa-map-location"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, KA,
-          India</span>
+        <span class="data"><i class="fa-solid fa-map-location"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, KA, India</span>
       </div>
-
       <span class="icons"><i class="fa-brands fa-linkedin"></i></span>
       <span class="icons"><i class="fa-brands fa-square-instagram"></i></span>
       <span class="icons"><i class="fa-brands fa-square-whatsapp"></i></span>
-
       <span class="circle"></span>
     </div>
     <div class="form">
-      <form action="">
+      <form action="php/submit_contact.php" method="post">
         <div class="same">
           <div class="one">
             <label for="name">Your Name</label>
-            <input id="name" type="text" class="name" />
+            <input id="name" name="name" type="text" class="name" required />
           </div>
-
           <div class="two">
             <label for="email">Your Email</label>
-            <input id="email" type="text" class="email" />
+            <input id="email" name="email" type="email" class="email" required />
           </div>
         </div>
-
         <label for="sub">Your Subject</label>
-        <input id="sub" type="text" class="sub" />
-
+        <input id="sub" name="subject" type="text" class="sub" required />
         <label for="message" class="message">Message</label>
-        <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64"></textarea>
-
-        <button class="submit-btn">Send Message</button>
+        <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64" required></textarea>
+        <button class="submit-btn" type="submit">Send Message</button>
       </form>
     </div>
   </div>
@@ -94,10 +81,6 @@
         document.getElementById('navbar-placeholder').innerHTML = data;
       })
       .catch(error => console.error('Error loading navbar:', error));
-
-
-
   </script>
 </body>
-
 </html>
