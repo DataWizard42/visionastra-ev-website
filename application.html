@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7e4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            margin-top: 20px;
+            overflow-y: auto;
+        }
+        .form-container h1 {
+            text-align: center;
+            color: #28a745;
+            margin-top: 0;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="file"],
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+        .navigate-button {
+            background-color: #007bff;
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+        .navigate-button:hover {
+            background-color: #0069d9;
+        }
+    </style>
+    <script>
+        function showConfirmation() {
+            alert("Your application has been submitted successfully!");
+        }
+        
+        function validateForm() {
+            const resumeInput = document.getElementById('resume');
+            const file = resumeInput.files[0];
+
+            if (file) {
+                const fileSizeInMB = file.size / (1024 * 1024);
+                const fileType = file.type;
+
+                if (fileType !== 'application/pdf') {
+                    alert('Please upload the resume in PDF format only.');
+                    return false;
+                }
+
+                if (fileSizeInMB > 2) { // Maximum size of 2MB
+                    alert('The resume file size should not exceed 2MB.');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function navigateToCoursePage() {
+            window.location.href = 'course-page.html'; // Replace with your actual course page URL
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Apply Now!</h1>
+        
+        
+        <form id="applicationForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm(); showConfirmation();">
+            <!-- Replace with your actual Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="b961fb0a-8d2b-4b51-b67e-3270e22c5809">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number." required>
+
+            <label for="college">College</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="degree">Degree</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="specialization">Specialization (Branch)</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="graduation">Year of Graduation</label>
+            <input type="text" id="graduation" name="graduation" pattern="\d{4}" title="Please enter a valid year." required>
+
+            <label for="resume">Upload Resume (PDF format, maximum size 2MB)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+            <label for="goals">Future Goals</label>
+            <textarea id="goals" name="goals" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <button class="navigate-button" onclick="navigateToCoursePage()">View courses</button>
+    </div>
+
+</body>
+</html>
