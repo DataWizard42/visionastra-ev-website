@@ -4,21 +4,20 @@ body {
 }
 
 header {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to blend with the background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fix the header at the top */
     top: 0; /* Align to the top of the viewport */
     left: 0; /* Align to the left of the viewport */
     width: 100%; /* Ensure it spans the full width */
     z-index: 1000; /* Ensure it sits above other content */
-    padding: 0; /* Remove padding to avoid unnecessary height */
+    padding: 10px 20px; /* Adjusted padding for better spacing */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Added padding for breathing space */
 }
 
 .logo img {
@@ -100,13 +99,15 @@ main {
     top: 50%; /* Centered vertically */
     left: 50%; /* Centered horizontally */
     transform: translate(-50%, -50%);
-    width: 90%; /* Adjust the width as needed */
+    width: 80%; /* Adjust the width as needed */
     max-width: 800px; /* Optional: Set a maximum width */
     text-align: center; /* Center the text within the hero section */
+    color: white; /* Ensures text is visible against the background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
     line-height: 1.2;
 }
