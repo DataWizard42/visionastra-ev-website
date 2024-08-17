@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Astraa</title>
     <link rel="stylesheet" href="css/mentorsstyle.css">
 </head>
+
 <body>
     <header>
-        <nav>
+        <!-- <nav>
             <div class="logo">
                 <img src="image/EV_logo.jpg" alt="Vision Astraa Logo">
             </div>
@@ -25,7 +27,9 @@
                 <a href="login.html><button class="login">Login</button></a>
                 <a href="signup.html"><button class="signup">Sign up</button></a>
             </div>
-        </nav>
+        </nav> -->
+
+        <div id="navbar-placeholder"></div>
     </header>
     <main>
         <h1>Our Mentors</h1>
@@ -40,15 +44,16 @@
                         <p class="title">Executive Director</p>
                         <p>American Axle Manufacturing,<br>Frankfurt, Germany<br>29+ years in Auto Industry</p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/martin-burgbacher-632b229b/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/martin-burgbacher-632b229b/"><img
+                                    src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-        
+
             <div class="profile">
                 <div class="flex-container">
                     <div>
@@ -59,11 +64,12 @@
                         <p class="title">Head of Driveline R&D</p>
                         <p>FPT Industrial,<br>Turin, Italy<br>17+ years in Auto Industry</p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/rahul-p-1588b915/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/rahul-p-1588b915/"><img
+                                    src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
 
@@ -77,7 +83,8 @@
                         <p class="title">COO</p>
                         <p>NRB Bearings,<br>Detroit, MI, USA<br>30+ years in Auto Industry</p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/kishore-ochani/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/kishore-ochani/"><img
+                                    src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
@@ -95,7 +102,8 @@
                         <p class="title">R&D Director</p>
                         <p>Marelli,<br>Canton, MI, USA<br>30+ years in Auto Industry</p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/dr-matti-vint/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/dr-matti-vint/"><img src="image/icons8-linkedin-30.png"
+                                    alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
@@ -113,7 +121,8 @@
                         <p class="title">Vice President</p>
                         <p>Morgan Stanley<br>Washington D.C., USA<br>15+ years in Auto Industry</p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/sujeesh-kurup/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/sujeesh-kurup/"><img src="image/icons8-linkedin-30.png"
+                                    alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
@@ -129,9 +138,11 @@
                     <div>
                         <h2>RAJ PUTTAIAH</h2>
                         <p class="title">Vice President</p>
-                        <p>EV Strategy and Battery Systems,<br>Marelli, Detroit, MI, USA<br>25+ years in Auto Industry</p>
+                        <p>EV Strategy and Battery Systems,<br>Marelli, Detroit, MI, USA<br>25+ years in Auto Industry
+                        </p>
                         <div class="icons">
-                            <a href="https://www.linkedin.com/in/raj-puttaiah-12935217/"><img src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                            <a href="https://www.linkedin.com/in/raj-puttaiah-12935217/"><img
+                                    src="image/icons8-linkedin-30.png" alt="LinkedIn"></a>
                             <a href="#"><img src="image/icons8-instagram-30.png" alt="Instagram"></a>
                             <a href="#"><img src="image/icons8-whatsapp-30.png" alt="WhatsApp"></a>
                         </div>
@@ -141,5 +152,19 @@
 
         </div>
     </main>
+
+    <script>
+        // Load the navbar.html file into the div with id="navbar-placeholder"
+        fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+
+
+
+    </script>
 </body>
+
 </html>

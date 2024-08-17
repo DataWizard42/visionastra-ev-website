@@ -11,17 +11,17 @@ header {
     padding:  0;  
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
+} */
 
-.logo img {
+/* .logo img {
     height: 70px;
     width: 100px;
-}
+} */
 
 .nav-links {
     list-style: none;
@@ -48,11 +48,11 @@ nav {
     border-bottom: 2px solid #ee491f; 
 }
 
-.auth-buttons {
+/* .auth-buttons {
     display: flex;
-}
+} */
 
-.auth-buttons .login,
+/* .auth-buttons .login,
 .auth-buttons .signup {
     background-color: green;
     color: white;
@@ -61,9 +61,9 @@ nav {
     margin-left: 10px;
     cursor: pointer;
     border-radius: 5px;
-}
+} */
 
-.auth-buttons .signup {
+/* .auth-buttons .signup {
     background-color: black;
 }
 
@@ -72,7 +72,7 @@ nav {
     background: linear-gradient(45deg, #bc3817, #e38034); 
     transform: translateY(-3px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+} */
 
 main {
     padding: 20px;
