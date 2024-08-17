@@ -94,8 +94,8 @@ main {
 
 .hero-text {
     position: absolute;
-    top: 40%;
-    left: 60%;
+    top: 73%;
+    left: 30%;
     transform: translate(-50%, -50%);
     width: 80%; /* Adjust the width as needed */
     max-width: 800px; /* Optional: Set a maximum width */
