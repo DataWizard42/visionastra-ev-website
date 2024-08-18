@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 $servername = "localhost";
 $username = "u707137586_EV_contact";
 $password = "B2&KY$&+gj";
@@ -7,7 +9,8 @@ $dbname = "u707137586_EV_Contact_US";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo json_encode(['success' => false, 'message' => 'Connection failed: ' . $conn->connect_error]);
+    exit();
 }
 
 $tableCreationQuery = "CREATE TABLE IF NOT EXISTS contact_form (
@@ -20,7 +23,8 @@ $tableCreationQuery = "CREATE TABLE IF NOT EXISTS contact_form (
 )";
 
 if ($conn->query($tableCreationQuery) === FALSE) {
-    die("Error creating table: " . $conn->error);
+    echo json_encode(['success' => false, 'message' => 'Error creating table: ' . $conn->error]);
+    exit();
 }
 
 $name = $_POST['name'];
@@ -32,9 +36,9 @@ $stmt = $conn->prepare("INSERT INTO contact_form (name, email, subject, message)
 $stmt->bind_param("ssss", $name, $email, $subject, $message);
 
 if ($stmt->execute()) {
-    echo "New record created successfully";
+    echo json_encode(['success' => true, 'message' => 'New record created successfully']);
 } else {
-    echo "Error: " . $stmt->error;
+    echo json_encode(['success' => false, 'message' => 'Error: ' . $stmt->error]);
 }
 
 $stmt->close();

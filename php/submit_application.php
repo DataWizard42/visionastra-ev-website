@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 $servername = "localhost";
 $username = "u707137586_EV_Reg_T1_24";
 $password = "DMKL0IYoP&4";
@@ -7,7 +9,8 @@ $dbname = "u707137586_EV_Reg_2024_T1";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo json_encode(["success" => false, "error" => "Connection failed: " . $conn->connect_error]);
+    exit();
 }
 
 $tableCreationQuery = "CREATE TABLE IF NOT EXISTS applications (
@@ -27,7 +30,8 @@ $tableCreationQuery = "CREATE TABLE IF NOT EXISTS applications (
 )";
 
 if ($conn->query($tableCreationQuery) === FALSE) {
-    die("Error creating table: " . $conn->error);
+    echo json_encode(["success" => false, "error" => "Error creating table: " . $conn->error]);
+    exit();
 }
 
 $name = $_POST['name'];
@@ -46,10 +50,9 @@ $stmt = $conn->prepare("INSERT INTO applications (name, email, phone, college, d
 $stmt->bind_param("ssssssssss", $name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals);
 
 if ($stmt->execute()) {
-    echo "Application submitted successfully!";
+    echo json_encode(["success" => true]);
 } else {
-    error_log("Error: " . $stmt->error);
-    echo "Error: Something went wrong!";
+    echo json_encode(["success" => false, "error" => $stmt->error]);
 }
 
 $stmt->close();
