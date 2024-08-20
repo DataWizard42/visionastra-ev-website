@@ -113,7 +113,7 @@
         }
 
         function navigateToCoursePage() {
-            window.location.href = 'course-page.html'; // Replace with your actual course page URL
+            window.location.href = 'course.html';
         }
 
         function submitForm(event) {
@@ -179,6 +179,9 @@
 
             <label for="resume">Upload Resume (PDF format, maximum size 2MB)</label>
             <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+            <label for="referral">Do you have a referral code? Enter it here!</label>
+            <input type="text" id="referral" name="referral">
 
             <label for="goals">Future Goals</label>
             <textarea id="goals" name="goals" rows="4" required></textarea>

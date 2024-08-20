@@ -25,6 +25,7 @@ $tableCreationQuery = "CREATE TABLE IF NOT EXISTS applications (
     resume LONGBLOB NOT NULL,
     resume_filename VARCHAR(255) NOT NULL,
     goals TEXT NOT NULL,
+    referral_code VARCHAR(50),
     confirmationEmailSent ENUM('true', 'false') NOT NULL DEFAULT 'false',
     submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
@@ -42,12 +43,15 @@ $degree = $_POST['degree'];
 $specialization = $_POST['specialization'];
 $graduation_year = $_POST['graduation'];
 $goals = $_POST['goals'];
+$referral_code = isset($_POST['referral']) ? $_POST['referral'] : null;
 
 $resume = file_get_contents($_FILES['resume']['tmp_name']);
 $resume_filename = $_FILES['resume']['name'];
 
-$stmt = $conn->prepare("INSERT INTO applications (name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, confirmationEmailSent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'false')");
-$stmt->bind_param("ssssssssss", $name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals);
+$stmt = $conn->prepare("INSERT INTO applications 
+    (name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, referral_code, confirmationEmailSent) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'false')");
+$stmt->bind_param("sssssssssss", $name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals, $referral_code);
 
 if ($stmt->execute()) {
     echo json_encode(["success" => true]);
