@@ -6,37 +6,19 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #01471f58;
+    /* background-color: #01471f58; */
     color: #333;
     line-height: 1.6;
-    background-image: url(../image/pngtree-cartoon-cute-doodles-electric-vehicle-seamless-pattern-image_1311985.jpg);
-}
-
-header {
-    background-color: #fff;
-    padding: 6px;
-    border-bottom: 1px solid #ddd;
+    /* background-image: url(../image/pngtree-cartoon-cute-doodles-electric-vehicle-seamless-pattern-image_1311985.jpg); */
+    
 }
 
 
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 500;
+header{
+    background: #022210e2; 
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 1.1em;
-}
 
 .hero {
     background-image: url('pngtree-cartoon-cute-doodles-electric-vehicle-seamless-pattern-image_1311985.jpg');
@@ -46,7 +28,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 89vh;
+    height: 100vh;
     background: #022210e2; /* Fallback color in case the image fails to load */
 }
 
@@ -55,7 +37,9 @@ header {
     margin-top: 10px;
 }
 
-
+main{
+    margin-top: 0;
+}
 
 
 .hero h1 {
