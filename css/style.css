@@ -5,58 +5,11 @@
   font-family: "Inika", serif;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 0px 4rem 0px 1.7rem;
-  flex-wrap: wrap;
-}
 
-.logo img {
-  margin-left: 0.7rem;
-  height: 5rem;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
 
-.nav-links a {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  padding: 0px 1rem;
-}
 
-.auth-buttons {
-  display: flex;
-  gap: 0.7rem;
-}
 
-.auth-buttons .login-btn,
-.auth-buttons .signup-btn {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.8rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 2.3px;
-}
-
-.auth-buttons .login-btn {
-  background-color: #247329;
-}
-
-.auth-buttons .signup-btn {
-  background-color: #000;
-}
 
 .upper {
   padding: 2.5rem 1.3rem 0.7rem;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- <nav class="navbar">
-      <div class="logo">
-        <img src="image/EV_logo.jpg" alt="logo" />
-      </div>
-      <ul class="nav-links">
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="mentors.html">Mentors</a></li>
-        <li><a href="placements.html">Placements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="auth-buttons">
-        <a href="login.html"><button class="login-btn">Login</button></a>
-        <a href="signup.html"><button class="signup-btn">Sign Up</button></a>
-      </div>
-    </nav> -->
+
   <div id="navbar-placeholder"></div>
   <div class="upper">
     <h1>Get In Touch</h1>
@@ -44,8 +31,10 @@
       <p>Contact Information</p>
       <div class="contact">
         <span class="data"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91-8197355166</span>
-        <span class="data"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onedream@visionastra.com</span>
-        <span class="data"><i class="fa-solid fa-map-location"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, KA, India</span>
+        <span class="data"><i
+            class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onedream@visionastra.com</span>
+        <span class="data"><i class="fa-solid fa-map-location"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, KA,
+          India</span>
       </div>
       <span class="icons"><i class="fa-brands fa-linkedin"></i></span>
       <span class="icons"><i class="fa-brands fa-square-instagram"></i></span>
@@ -67,14 +56,15 @@
         <label for="sub">Your Subject</label>
         <input id="sub" name="subject" type="text" class="sub" required />
         <label for="message" class="message">Message</label>
-        <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64" required></textarea>
+        <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64"
+          required></textarea>
         <button class="submit-btn" type="submit">Send Message</button>
       </form>
       <div id="responseMessage"></div>
     </div>
   </div>
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
       const formData = new FormData(this);
@@ -83,18 +73,18 @@
         method: 'POST',
         body: formData
       })
-      .then(response => response.json())
-      .then(data => {
-        const responseMessage = document.getElementById('responseMessage');
-        if (data.success) {
-          responseMessage.innerHTML = `<p style="color: green;">${data.message}</p>`;
-        } else {
-          responseMessage.innerHTML = `<p style="color: red;">${data.message}</p>`;
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+        .then(response => response.json())
+        .then(data => {
+          const responseMessage = document.getElementById('responseMessage');
+          if (data.success) {
+            responseMessage.innerHTML = `<p style="color: green;">${data.message}</p>`;
+          } else {
+            responseMessage.innerHTML = `<p style="color: red;">${data.message}</p>`;
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
     });
 
     // Load the navbar.html file into the div with id="navbar-placeholder"
@@ -106,4 +96,5 @@
       .catch(error => console.error('Error loading navbar:', error));
   </script>
 </body>
+
 </html>

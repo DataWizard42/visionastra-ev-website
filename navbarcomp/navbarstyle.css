@@ -13,6 +13,7 @@ body {
     /* margin-top: 30px; */
     margin-left: 80px;
     margin-right: 80px;
+    padding-top: 30px;
 }
 .navbar {
     display: flex;
