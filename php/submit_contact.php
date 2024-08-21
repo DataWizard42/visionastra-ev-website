@@ -36,7 +36,7 @@ $stmt = $conn->prepare("INSERT INTO contact_form (name, email, subject, message)
 $stmt->bind_param("ssss", $name, $email, $subject, $message);
 
 if ($stmt->execute()) {
-    echo json_encode(['success' => true, 'message' => 'New record created successfully']);
+    echo json_encode(['success' => true, 'message' => 'Your message has been sent successfully!']);
 } else {
     echo json_encode(['success' => false, 'message' => 'Error: ' . $stmt->error]);
 }
