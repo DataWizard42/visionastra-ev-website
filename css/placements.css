@@ -2,56 +2,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 60px; /* Adjust based on the height of your header */
+    background-color: #202020;
 }
 
-header {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fix the header at the top */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1000; /* Ensure it sits above other content */
-    padding:  0; /* Optional: Add padding to adjust height */
-}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    
-}
 
-.logo img {
-    height: 70px;
-}
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin-left:120px;
-    padding: 0;
-   
-}
-.links-box{
-    margin-left: 470px;
-}
 
-.nav-links li {
-    margin : 10px;
-}
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-.nav-links a:hover {
-    color: #ee3e12; /* Change to your desired hover color */
-    border-bottom: 2px solid #ee491f; /* Add an underline effect */
-}
+
 
 .auth-buttons {
     display: flex;
