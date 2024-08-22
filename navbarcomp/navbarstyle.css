@@ -10,7 +10,6 @@ body {
 .main{
     display: flex;
     align-items: center;
-    /* margin-top: 30px; */
     margin-left: 80px;
     margin-right: 80px;
     padding-top: 10px;
@@ -89,7 +88,7 @@ body {
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: #ffffff;
+        /* background-color: #ffffff; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
