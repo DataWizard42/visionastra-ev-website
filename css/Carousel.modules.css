@@ -18,6 +18,13 @@ header {
     z-index: 1000; /* Higher z-index ensures it's above the carousel */
 }
 
+header .nav-links{
+  
+    padding-top: 10px;
+
+}
+
+
 .carousel-caption {
     position: absolute;
     top: 50%;

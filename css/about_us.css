@@ -13,7 +13,19 @@ body {
     padding-top: 60px; /* Adjust based on the height of your header */
 }
 
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Higher z-index ensures it's above the carousel */
+}
 
+header .nav-links{
+  
+    padding-top: 10px;
+
+}
 .about-us {
     position: relative;
     overflow: hidden; /* Ensure content does not overflow */
