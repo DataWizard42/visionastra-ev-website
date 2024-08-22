@@ -40,7 +40,7 @@
                 <div class="same">
                     <div class="one">
                         <label for="name">Your Name</label>
-                        <input id="name" name="name" type="text" class="name" required />
+                        <input id="name" name="name" type="text" class="name" required minlength="2" maxlength="50" />
                     </div>
                     <div class="two">
                         <label for="email">Your Email</label>
@@ -48,9 +48,9 @@
                     </div>
                 </div>
                 <label for="sub">Your Subject</label>
-                <input id="sub" name="subject" type="text" class="sub" required />
+                <input id="sub" name="subject" type="text" class="sub" required minlength="5" maxlength="100" />
                 <label for="message" class="message">Message</label>
-                <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64" required></textarea>
+                <textarea name="message" id="message" placeholder="Write your message here" rows="4" cols="64" required minlength="10" maxlength="500"></textarea>
                 <button class="submit-btn" type="submit">Send Message</button>
             </form>
             <div id="responseMessage"></div>
@@ -60,6 +60,34 @@
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('sub').value;
+            const message = document.getElementById('message').value;
+            const responseMessage = document.getElementById('responseMessage');
+
+            // Custom validation
+            if (name.trim().length < 2 || name.trim().length > 50) {
+                responseMessage.innerHTML = '<p style="color: red;">Name must be between 2 and 50 characters.</p>';
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                responseMessage.innerHTML = '<p style="color: red;">Please enter a valid email address.</p>';
+                return;
+            }
+
+            if (subject.trim().length < 5 || subject.trim().length > 100) {
+                responseMessage.innerHTML = '<p style="color: red;">Subject must be between 5 and 100 characters.</p>';
+                return;
+            }
+
+            if (message.trim().length < 10 || message.trim().length > 500) {
+                responseMessage.innerHTML = '<p style="color: red;">Message must be between 10 and 500 characters.</p>';
+                return;
+            }
+
+            // If all validations pass, submit the form
             const formData = new FormData(this);
 
             fetch('php/submit_contact.php', {
@@ -68,7 +96,6 @@
             })
             .then(response => response.json())
             .then(data => {
-                const responseMessage = document.getElementById('responseMessage');
                 if (data.success) {
                     responseMessage.innerHTML = `<p style="color: green;">${data.message}</p>`;
                     this.reset();
@@ -77,10 +104,14 @@
                 }
             })
             .catch(error => {
-                const responseMessage = document.getElementById('responseMessage');
                 responseMessage.innerHTML = `<p style="color: red;">Error: Something went wrong!</p>`;
             });
         });
+
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
 
         // Load the navbar.html file into the div with id="navbar-placeholder"
         fetch('navbarcomp/navbar.html')
