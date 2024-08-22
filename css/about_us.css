@@ -12,7 +12,10 @@ body {
     font-family: Arial, sans-serif;
     padding-top: 60px; /* Adjust based on the height of your header */
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1d81bf1fc7fb5cc40e61d71a10f58ab5b09caca
 header {
     position: absolute;
     top: 0;
