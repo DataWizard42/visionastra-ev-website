@@ -9,13 +9,19 @@
     width: 100%;  
 }
 
-header{
-    background: none;
+/* Ensure the header is over the carousel */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Higher z-index ensures it's above the carousel */
 }
+
 .carousel-caption {
     position: absolute;
     top: 50%;
-    left: 50%; /* Change this from 100% to 50% */
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
