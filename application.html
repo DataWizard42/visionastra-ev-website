@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
     <style>
-        body {
+        body, html {
             font-family: Arial, sans-serif;
-            background-color: #e0f7e4;
+            background-color: #e0f7e4; 
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
+            height: 100%;
+            overflow: auto; /* Ensure the page is scrollable */
         }
         .form-container {
             background-color: #fff;
@@ -22,8 +20,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 400px;
-            margin-top: 20px;
-            overflow-y: auto;
+            margin: 20px auto;
+            overflow-y: auto; /* Allow the form container to scroll if content overflows */
         }
         .form-container h1 {
             text-align: center;
@@ -89,74 +87,33 @@
             font-size: 16px;
             text-align: center;
         }
+        .contact-admissions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-admissions a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+        .contact-admissions a:hover {
+            text-decoration: underline;
+        }
     </style>
-    <script>
-        function validateForm() {
-            const resumeInput = document.getElementById('resume');
-            const file = resumeInput.files[0];
-
-            if (file) {
-                const fileSizeInMB = file.size / (1024 * 1024);
-                const fileType = file.type;
-
-                if (fileType !== 'application/pdf') {
-                    alert('Please upload the resume in PDF format only.');
-                    return false;
-                }
-
-                if (fileSizeInMB > 2) { // Maximum size of 2MB
-                    alert('The resume file size should not exceed 2MB.');
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        function navigateToCoursePage() {
-            window.location.href = 'course.html';
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-
-            if (!validateForm()) {
-                return;
-            }
-
-            const form = document.getElementById('applicationForm');
-            const formData = new FormData(form);
-
-            fetch('php/submit_application.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                const messageDiv = document.getElementById('message');
-                if (data.success) {
-                    messageDiv.textContent = "Your application has been submitted successfully!";
-                    messageDiv.style.color = "green";
-                    form.reset();
-                } else {
-                    messageDiv.textContent = "Error: " + data.error;
-                    messageDiv.style.color = "red";
-                }
-            })
-            .catch(error => {
-                const messageDiv = document.getElementById('message');
-                messageDiv.textContent = "Error: Something went wrong!";
-                messageDiv.style.color = "red";
-            });
-        }
-    </script>
 </head>
 <body>
-
+     <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+    <!-- Application Form -->
     <div class="form-container">
         <h1>Apply Now!</h1>
 
         <form id="applicationForm" onsubmit="submitForm(event);" enctype="multipart/form-data">
-            <label for="name">Name</label>
+            <label for="name">First name</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
+
+            <label for="name">Last name</label>
             <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
 
             <label for="email">Email</label>
@@ -164,6 +121,9 @@
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number." required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
 
             <label for="college">College</label>
             <input type="text" id="college" name="college" required>
@@ -194,5 +154,75 @@
         <div id="message" class="message"></div>
     </div>
 
+    <!-- Contact Admissions Pointer -->
+    <div class="contact-admissions">
+        <p>Have questions? <a href="contact.html">Contact Admissions</a></p>
+    </div>
+
+    <script>
+         fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+        function validateForm() {
+            const resumeInput = document.getElementById('resume');
+            const file = resumeInput.files[0];
+
+            if (file) {
+                const fileSizeInMB = file.size / (1024 * 1024);
+                const fileType = file.type;
+
+                if (fileType !== 'application/pdf') {
+                    alert('Please upload the resume in PDF format only.');
+                    return false;
+                }
+
+                if (fileSizeInMB > 2) { // Maximum size of 2MB
+                    alert('The resume file size should not exceed 2MB.');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function navigateToCoursePage() {
+            window.location.href = 'courses.html';
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            if (!validateForm()) {
+                return;
+            }
+
+            const form = document.getElementById('applicationForm');
+            const formData = new FormData(form);
+
+            fetch('php/submit_application.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById('message');
+                if (data.success) {
+                    messageDiv.textContent = "Your application has been submitted successfully!";
+                    messageDiv.style.color = "green";
+                    form.reset();
+                } else {
+                    messageDiv.textContent = "Error: " + data.error;
+                    messageDiv.style.color = "red";
+                }
+            })
+            .catch(error => {
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = "There was an error submitting the form.";
+                messageDiv.style.color = "red";
+            });
+        }
+    </script>
 </body>
 </html>
