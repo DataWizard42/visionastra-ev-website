@@ -7,6 +7,20 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+.suntext{
+    margin-top: 500px;
+    justify-items: center;
+    display: grid;
+    place-items: center;
+}
+
+.suntext p,h4{
+    text-align: justify;
+    max-width: 60%;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -77,8 +91,9 @@ header .nav-links{
 }
 
 .glass-panel h3{
+    /* margin-top: 10px; */
     font-size: 39px;
-    padding-top:50px;
+    /* padding-top:50px; */
     margin-bottom: 29rem;
 }
 
@@ -128,6 +143,7 @@ header .nav-links{
     display: flex;
     text-align: center;
     justify-content: center;
+    width: 80%;
 }
 
 .mission-vision div {
@@ -383,12 +399,22 @@ header .nav-links{
 .lastimg{
     height: auto; 
         width:80px;}
-
+@media screen and (max-width:1000px) {
+    .suntext{
+        margin-top: 600px;
+       }
+    .suntext p{
+        font-size: 4em;
+    }
+    
+}
 
 @media screen and (max-width:1000px) {
    .footer .secpart{
     margin-left: 0px;
    }
+
+  
     .thirdpart,
     .secpart
     {
