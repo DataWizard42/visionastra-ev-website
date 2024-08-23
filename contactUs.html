@@ -79,8 +79,6 @@
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             var form = e.target;
-
-            // Perform custom JavaScript validation if needed
             if (form.checkValidity()) {
                 var formData = new FormData(form);
 
@@ -94,7 +92,6 @@
                 };
                 xhr.send(formData);
             } else {
-                // Display a message if form validation fails
                 alert('Please fill out the form correctly.');
             }
         });

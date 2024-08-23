@@ -137,6 +137,11 @@
             <label for="graduation">Year of Graduation</label>
             <input type="text" id="graduation" name="graduation" pattern="\d{4}" title="Please enter a valid year." required>
 
+            <label for="term">Batch</label>
+            <select id="term" name="term" required>
+                <option value="Fall 2024">Fall 2024</option>
+            </select>
+
             <label for="resume">Upload Resume (PDF format, maximum size 2MB)</label>
             <input type="file" id="resume" name="resume" accept=".pdf" required>
 
@@ -154,7 +159,6 @@
         <div id="message" class="message"></div>
     </div>
 
-    <!-- Contact Admissions Pointer -->
     <div class="contact-admissions">
         <p>Have questions? <a href="contactUs.html">Contact Admissions</a></p>
     </div>
