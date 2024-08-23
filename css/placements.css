@@ -15,7 +15,7 @@ main {
 .hero {
     position: relative;
     overflow: hidden;
-    height: 50vh; /* Adjust height as needed */
+    height: 80vh; /* Adjust height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
