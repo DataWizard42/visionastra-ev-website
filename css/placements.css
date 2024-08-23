@@ -12,16 +12,16 @@ main {
     padding: 0; /* Remove padding for content */
 }
 
-.hero {
+/* .hero {
     position: relative;
     overflow: hidden;
-    height: 80vh; /* Adjust height as needed */
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black; /* Text color */
-    width: 700px; /* Ensure it covers the full width */
-}
+    color: black;
+    width: 700px;
+} */
 
 .hero img {
     width: 100%;
@@ -59,12 +59,22 @@ main {
     font-size: 1.2rem; /* Adjust font size */
     margin: 0;
 }
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; /* Text color */
+    width: 100%; /* Ensure it covers the full width of the screen */
+}
 
 .recruiters {
     padding: 40px 0; /* Adjusted to remove padding on sides */
     text-align: center;
     background-color: #f9f9f9; /* Light background color */
-    width: 100%; /* Ensure it covers the full width */
+    width: 100%; /* Ensure it covers the full width of the screen */
     margin: 0; /* Remove margin to eliminate spacing */
 }
 
