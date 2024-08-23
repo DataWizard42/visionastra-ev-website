@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 60px; /* Adjust based on the height of your header */
+    padding-top: 60px; 
     background-color: #202020;
 }
 
@@ -26,7 +26,7 @@ main {
 .hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
+    object-fit: cover; 
 }
 
 .hero-text {
@@ -34,19 +34,19 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ensure it matches the height of the background image */
+    height: 100%; 
     text-align: left;
     background: rgba(0, 0, 0, 0.8); /* Black glass panel effect */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: white; /* White text color */
+    color: white;
     padding: 20px;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem; /* Adjust font size */
+    font-size: 2.5rem;
     margin: 0 0 10px;
 }
 
@@ -56,32 +56,32 @@ main {
 }
 
 .hero-text p {
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem; 
     margin: 0;
 }
 .hero {
     position: relative;
     overflow: hidden;
-    height: 50vh; /* Adjust height as needed */
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black; /* Text color */
-    width: 100%; /* Ensure it covers the full width of the screen */
+    color: black; 
+    width: 100%; 
 }
 
 .recruiters {
-    padding: 40px 0; /* Adjusted to remove padding on sides */
+    padding: 40px 0; 
     text-align: center;
-    background-color: #f9f9f9; /* Light background color */
-    width: 100%; /* Ensure it covers the full width of the screen */
-    margin: 0; /* Remove margin to eliminate spacing */
+    background-color: #f9f9f9; 
+    width: 100%; 
+    margin: 0; 
 }
 
 .recruiters h2 {
-    font-size: 2rem; /* Adjust font size */
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: black; /* Text color */
+    color: black; 
 }
 
 .recruiter-logos {
@@ -126,12 +126,12 @@ main {
 }
 
 @media (max-width: 768px) {
-    /* Adjust breakpoint as needed */
+    
     .nav-links {
         display: none; /* Hide the navigation links on smaller screens */
     }
     .auth-buttons {
-        display: flex; /* Ensure buttons are displayed as a flex container */
-        justify-content: flex-end; /* Align buttons to the right */
+        display: flex; 
+        justify-content: flex-end; 
     }
 }
