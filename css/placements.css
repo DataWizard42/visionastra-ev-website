@@ -20,7 +20,7 @@ main {
     align-items: center;
     justify-content: center;
     color: black; /* Text color */
-    width: 100%; /* Ensure it covers the full width */
+    width: 700px; /* Ensure it covers the full width */
 }
 
 .hero img {
