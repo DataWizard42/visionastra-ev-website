@@ -16,9 +16,9 @@ header {
     left: 0;
     width: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-    opacity: 0.80;
+    /*opacity: 0.80; */
     /* Adjust the direction of the gradient and the opacity values as needed */
-    border-radius: 10px; /* Optional: to round the corners */
+    border-radius: 100px; /* Optional: to round the corners */
     z-index: 1000; /* Higher z-index ensures it's above the carousel */
 }
 
