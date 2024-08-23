@@ -31,13 +31,17 @@ h1 {
 .mentor {
     background-color: #1D2E28;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    /* padding-bottom: 20px; */
+    height: 280px;
+   
 }
 
-#mentor5{
+/* #mentor5{
     padding-bottom: 5px;
-}
+} */
 
 .mentor img {
     width: 140px;
