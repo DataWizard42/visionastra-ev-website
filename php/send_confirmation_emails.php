@@ -11,14 +11,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name, email FROM applications WHERE confirmationEmailSent = 'false'";
+$sql = "SELECT id, first_name, email FROM applications WHERE confirmationEmailSent = 'false'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $to = $row['email'];
         $subject = 'Confirmation of Application Submission';
-        $message = 'Dear ' . $row['name'] . ',<br><br>Thank you for your application. We have received your details and will get back to you soon.<br><br>Best regards,<br>VisionAstraa EV Academy';
+        $message = 'Dear ' . $row['first_name'] . ',<br><br>Thank you for your application. We have received your details and will get back to you soon.<br><br>Best regards,<br>VisionAstraa EV Academy';
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= 'From: recruitment@visionastraa.com' . "\r\n";
