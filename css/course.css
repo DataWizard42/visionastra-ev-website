@@ -292,7 +292,7 @@ header .nav-links {
 
 /* Course Content Table */
 .course-content table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -403,6 +403,10 @@ header .nav-links {
     .instructor-card {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .course-content table {
+        width: 90%;
     }
 }
 
