@@ -29,28 +29,33 @@ footer {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  margin-left:90px;
+  margin-left: 90px;
 }
 
-.footer-links, .footer-follow {
+.footer-links,
+.footer-follow {
   width: 48%;
 }
 
-.footer-links h2, .footer-follow h2 {
+.footer-links h2,
+.footer-follow h2 {
   font-size: 20px;
   color: #27ae60;
 }
 
-.footer-links ul, .footer-follow ul {
+.footer-links ul,
+.footer-follow ul {
   list-style-type: none;
   padding: 0;
 }
 
-.footer-links ul li, .footer-follow ul li {
+.footer-links ul li,
+.footer-follow ul li {
   margin-bottom: 10px;
 }
 
-.footer-links ul li a, .footer-follow ul li a {
+.footer-links ul li a,
+.footer-follow ul li a {
   color: #ffffff;
   text-decoration: none;
 }
