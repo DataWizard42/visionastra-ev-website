@@ -318,7 +318,7 @@ main {
     border-radius: 10px;
     text-align: left; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative; /* Ensure the close button is positioned relative to this container */
+    position: relative;
 }
 
 .close-btn {
@@ -334,7 +334,7 @@ main {
     padding: 5px;
     padding-left: 1px;
     padding-right: 1px;
-    z-index: 1100; /* Ensure it's above other content */
+    z-index: 1100;
 }
 
 .close-btn:hover,
@@ -517,8 +517,7 @@ main {
 }
 /* Media Query for screens smaller than 1000px width */
 @media screen and (max-width: 1000px) {
-    
-    /* Sun Text Section */
+
     .suntext {
         margin-top: 600px;
     }
@@ -530,7 +529,6 @@ main {
     .footer {
         padding: 10px 10px;
     }
-    /* Footer Section Adjustments */
     .footer .secpart {
         margin-left: 0;
     }
@@ -541,28 +539,24 @@ main {
         flex: 0;
     }
 
-    /* Row Alignment */
     .row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 5px 50px;
-        height: auto; /* Consider using a more fluid unit like auto if height shouldn't be fixed */
+        height: auto; 
     }
 
-    /* Last Image Adjustments */
     .lastimg {
         width: 40px;
-        height: auto; /* Auto height to maintain aspect ratio */
+        height: auto;
     }
 
-    /* Paragraph Text in .lalala */
     .lalala p {
         font-size: 12px;
     }
 
-    /* Last Button Adjustments */
     .lastb {
         margin-left: 30px;
         font-weight: bold;
@@ -580,7 +574,6 @@ main {
         justify-content: center;
     }
 
-    /* List Styles */
     .listone,
     .listtwo li a {
         padding: 1px;
