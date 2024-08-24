@@ -29,6 +29,7 @@ $tableCreationQuery = "CREATE TABLE IF NOT EXISTS applications (
     referral_code VARCHAR(50),
     term VARCHAR(20) NOT NULL DEFAULT 'Fall 2024',
     enrolled ENUM('true', 'false') NOT NULL DEFAULT 'false',
+    confirmationEmailSent ENUM('true', 'false') NOT NULL DEFAULT 'false',
     submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
@@ -53,8 +54,9 @@ $resume = file_get_contents($_FILES['resume']['tmp_name']);
 $resume_filename = $_FILES['resume']['name'];
 
 $stmt = $conn->prepare("INSERT INTO applications 
-    (first_name, last_name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, referral_code, term, enrolled) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'false')");
+    (first_name, last_name, email, phone, college, degree, specialization, graduation_year, resume, resume_filename, goals, referral_code, term, enrolled, confirmationEmailSent) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'false', 'false')");
+
 $stmt->bind_param("sssssssssssss", $first_name, $last_name, $email, $phone, $college, $degree, $specialization, $graduation_year, $resume, $resume_filename, $goals, $referral_code, $term);
 
 if ($stmt->execute()) {
