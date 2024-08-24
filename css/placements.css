@@ -88,7 +88,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px; /* Space between logos */
+    gap: 30px; /* Space between logos */
 }
 
 .recruiter-logos img {
