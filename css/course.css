@@ -290,6 +290,30 @@ header .nav-links {
     color: #FFFFFF !important; /* Ensures text in table headers and cells is white */
 }
 
+/* Course Content Table */
+.course-content table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.course-content th, .course-content td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+.course-content th {
+    background-color: #333;
+}
+
+.course-content td button {
+    background: none;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
 /* Table Headers */
 .course-content th {
     background-color: #202020;
