@@ -7,14 +7,14 @@
     <style>
         body, html {
             font-family: Arial, sans-serif;
-            background-color: #e0f7e4; 
+            background-color: #1c1c1c; 
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: auto; /* Ensure the page is scrollable */
         }
         .form-container {
-            background-color: #fff;
+            background-color: #202020;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,16 +25,17 @@
         }
         .form-container h1 {
             text-align: center;
-            color: #28a745;
+            color: #fff;
             margin-top: 0;
         }
         .form-container h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #28a745;
+            color: #fff;
         }
         .form-container label {
             display: block;
+            color: #fff;
             margin-bottom: 8px;
             font-weight: bold;
         }
@@ -47,7 +48,9 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #fff;
             border-radius: 4px;
             box-sizing: border-box;
         }
@@ -57,15 +60,17 @@
         .form-container button {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
-            color: white;
+            background-color: #fff;
+            border-radius: 20px;
+            color: black;
             border: none;
-            border-radius: 4px;
+            border-radius: 20px;
             cursor: pointer;
             font-size: 16px;
         }
         .form-container button:hover {
-            background-color: #218838;
+            background-color: #5642a3;
+            color: #fff;
         }
         .navigate-button {
             background-color: #007bff;
@@ -90,6 +95,7 @@
         .contact-admissions {
             text-align: center;
             margin-top: 20px;
+            color: #fff;
         }
         .contact-admissions a {
             text-decoration: none;
@@ -110,11 +116,11 @@
         <h1>Apply Now!</h1>
 
         <form id="applicationForm" onsubmit="submitForm(event);" enctype="multipart/form-data">
-            <label for="name">First name</label>
-            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
 
-            <label for="name">Last name</label>
-            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" pattern="[A-Za-z\s]+" title="Please enter only letters." required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
@@ -122,13 +128,13 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number." required>
 
-            <label for="location">Location</label>
+            <label for="location">Your Location (City/Town)</label>
             <input type="text" id="location" name="location" required>
 
             <label for="college">College</label>
             <input type="text" id="college" name="college" required>
 
-            <label for="degree">Degree</label>
+            <label for="degree">Degree (B.E/B.Tech/M.Tech)</label>
             <input type="text" id="degree" name="degree" required>
 
             <label for="specialization">Specialization (Branch)</label>
@@ -137,9 +143,10 @@
             <label for="graduation">Year of Graduation</label>
             <input type="text" id="graduation" name="graduation" pattern="\d{4}" title="Please enter a valid year." required>
 
-            <label for="term">Batch</label>
+            <label for="term">Applying for which term?</label>
             <select id="term" name="term" required>
-                <option value="Fall 2024">Fall 2024</option>
+                <option value="Fall 2024">Fall 2024 (October Start)</option>
+                <option value="Winter 2025">Winter 2025 (February Start)</option> 
             </select>
 
             <label for="resume">Upload Resume (PDF format, maximum size 2MB)</label>
@@ -148,7 +155,7 @@
             <label for="referral">Do you have a referral code? Enter it here!</label>
             <input type="text" id="referral" name="referral">
 
-            <label for="goals">Future Goals</label>
+            <label for="goals">Why you should be selected? Describe in your own words (&lt; 500 words) </label>
             <textarea id="goals" name="goals" rows="4" required></textarea>
 
             <button type="submit">Submit</button>
