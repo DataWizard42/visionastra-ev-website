@@ -135,3 +135,152 @@ main {
         justify-content: flex-end; 
     }
 }
+.footer {
+    background-color: #23272A;
+    color: #008000;
+    padding: 10px 150px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer .secpart{
+    margin-left: 60px;
+}
+.container{
+    gap: 100px;
+}
+.thirdpart{
+    margin-left: 20px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h5 {
+    font-weight: bold;
+    font-size:20px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 8px;
+}
+
+.footer .list-unstyled a {
+    font-size: 14px;
+}
+
+.footer .text-center {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.last{
+    display: flex;
+    justify-content: space-between;
+    height: none;
+
+}
+.lastb{
+    font-weight: bold;
+    font-size: small;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    height: auto;
+    align-items: center;
+    margin-top: 40%;
+    background-color: #008000;
+    color: white;
+
+}
+
+.lastimg{
+    height: auto; 
+        width:80px;}
+@media screen and (max-width:1000px) {
+    .suntext{
+        margin-top: 600px;
+       }
+    .suntext p{
+        font-size: 4em;
+    }
+    
+}
+
+@media screen and (max-width:1000px) {
+   .footer .secpart{
+    margin-left: 0px;
+   }
+
+  
+    .thirdpart,
+    .secpart
+    {
+       margin: 5px 0px;
+       flex: 0;
+       /* fle */
+        
+    }
+    .row{
+    text-align: center;
+     text-align: justify; 
+    display: flex;
+    margin: 5px 50px;
+    flex-direction: column; /* or row, depending on your layout */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+ height: 100vh; 
+    }
+
+    .lastimg{
+        width: 40px;
+        height: auto;
+    }
+
+    .lalala p{
+        font-size: 12px;
+    }
+
+    .lastb{
+        margin-left: 30px;
+        font-weight: bold;
+        font-size: 10px;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 15px;
+        height: auto;
+        align-items: center;
+        margin-top: 20px;
+        background-color: #008000;
+        color: white;
+        width:100px;
+    
+    }
+
+    .listone,
+    .listtwo li a{
+        padding:1px; 
+        margin: 0px;
+
+    }
+    .listone,
+    .listtwo li {
+        padding:1px;
+        margin: 0px 0px 0px 0px;
+
+    }
+    
+}
