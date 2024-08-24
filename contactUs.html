@@ -66,7 +66,6 @@
             </div>
         </div>
     </div>
-    <div id="footer-placeholder"></div>/* footer trial */
     
     <script>
         fetch('navbarcomp/navbar.html')
@@ -79,12 +78,6 @@
         /* document.getElementById("hamburger").onclick = function () {
             document.getElementById("nav-links").classList.toggle("active");
         }; */
-        fetch('footerComponent.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
 
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
