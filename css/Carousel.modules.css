@@ -29,11 +29,28 @@ header {
 
   z-index: 1000;
 }
-/* .slide {
-  background-color: black;/
-} */
+.bg-dark {
+  background: rgba(0, 0, 0, 0.851);
+  z-index: 1;
+}
 header .nav-links {
   padding-top: 10px;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.685); /* Adjust the transparency */
+  z-index: 1;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 0;
 }
 
 .static-text {
@@ -42,12 +59,11 @@ header .nav-links {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.921);
-  z-index: 1500; /* Ensure it is above the carousel */
-  /* border: 2px solid black; */
+  z-index: 1500;
   text-decoration: solid;
 }
 
