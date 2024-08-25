@@ -282,19 +282,13 @@ header .nav-links {
     width: 100%;
     border-collapse: collapse;
     color: #fff;
+    margin-top: 20px;
 }
 
 .course-content th, .course-content td {
     padding: 15px;
     border: 1px solid #282828;
     color: #FFFFFF !important; /* Ensures text in table headers and cells is white */
-}
-
-/* Course Content Table */
-.course-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
 }
 
 .course-content th, .course-content td {
@@ -319,6 +313,7 @@ header .nav-links {
     background-color: #202020;
     font-weight: bold;
     color: #fff;
+    text-align: center;
 }
 
 /* Table Cells */
@@ -406,10 +401,17 @@ header .nav-links {
     }
 
     .course-content table {
-        width: 90%;
+        width: 100%;
         overflow-x: auto;
         border-collapse: collapse;
         margin-top: 20px;
+    }
+
+    /* Table Cells */
+    .course-content td {
+        background-color: #202020;
+        color: #fff;
+        text-align: center;
     }
 }
 
