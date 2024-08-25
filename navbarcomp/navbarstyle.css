@@ -83,6 +83,12 @@ body {
         display: flex;
     }
 
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        position: relative; /* To position the dropdown menu */
+    }
+
     .nav-links {
         position: absolute;
         top: 60px;
@@ -97,14 +103,17 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 2000;
     }
 
     .nav-links.active {
         max-height: 500px;
-        width: 175px;
+        width: 150px;
         transform: translateY(0);
         opacity: 0.8;
+        border-radius: 8px;
         visibility: visible;
+        z-index: 2000;
     }
 
     .nav-links li {
