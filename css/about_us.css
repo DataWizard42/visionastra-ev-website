@@ -83,14 +83,14 @@ header .nav-links {
 
 .glass-panel h3 {
     font-size: 39px;
-    margin-bottom: 25rem;
+    margin-bottom: 23rem;
 }
 
 .glass-panel p:first-of-type {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .glass-panel h2 {
