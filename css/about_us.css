@@ -26,10 +26,6 @@ body {
     background-color: #202020;
 }
 
-header .nav-links {
-    padding-top: 10px;
-}
-
 .about-us {
     position: relative;
     overflow: hidden; /* Ensure content does not overflow */

@@ -33,10 +33,6 @@ header {
   z-index: 1;
 }
 
-header .nav-links {
-  padding-top: 10px;
-}
-
 .carousel-item::before {
   content: "";
   position: absolute;
