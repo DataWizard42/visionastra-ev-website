@@ -8,7 +8,7 @@
 }
 
 .suntext {
-    margin-top: 500px;
+    margin-top: 350px;
     justify-items: center;
     display: grid;
     place-items: center;
@@ -23,14 +23,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 60px; /* Adjust based on the height of your header */
-}
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Higher z-index ensures it's above the carousel */
+    background-color: #202020;
 }
 
 header .nav-links {
