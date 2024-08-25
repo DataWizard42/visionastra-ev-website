@@ -7,24 +7,20 @@
     <title>Contact Us</title>
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- 
     <link rel="stylesheet" href="css/contactUs.css">
- 
-
 </head>
-
 <body>
-
     <header>
         <div id="navbar-placeholder"></div>
     </header>
     <div class="boody">
         <div class="container">
             <div class="contact-form">
+                <h2>Contact Admissions Department</h2> <br>
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
-                         <input type="text" id="name" name="name" placeholder="Name" required minlength="2" pattern="[A-Za-z\s]+" title="Please enter a valid name (letters only).">
+                        <input type="text" id="name" name="name" placeholder="Name" required minlength="2" pattern="[A-Za-z\s]+" title="Please enter a valid name (letters only).">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -43,18 +39,27 @@
                 <div id="formResponse"></div>
             </div>
             <div class="contact-info">
-                <h2>Contact Admissions Department </h2>
-                <p>For questions, technical assistance, or collaboration opportunities via the contact information
-                    provided.</p>
-                <div class="info-item">
+                <p>For questions, technical assistance, or collaboration opportunities via the contact information provided.</p>
+                <!-- <div class="info-item">
                     <i class="fas fa-phone-alt"></i>
                     <a href="tel:+918197355166">+91 8197355166</a>
-                </div>
+                </div> -->
                 <div class="info-item">
-                  <p>Reach Head of Admissions &nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <i class="fas fa-phone-alt"></i>
-                  <a href="tel:+918197355166">+91 9740183638</a>
-                 </div>
+                    <div class="info-heading-container">
+                        <p class="info-heading">Reach Head of Admissions</p>
+                    </div>
+                    <br><br><br>
+                    <div class="sub-info-item">
+                        <ul class="no-bullets">
+                            <li><i class="fas fa-phone-alt"></i>
+                                <a href="tel:+918197355166">+91 8197355166</a></li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <a href="tel:+918197355166">+91 9740183638</a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:admissions@visionastraa.com">admissions@visionastraa.com</a>
@@ -66,7 +71,6 @@
             </div>
         </div>
     </div>
-    
     <script>
         fetch('navbarcomp/navbar.html')
             .then(response => response.text())
@@ -74,11 +78,9 @@
                 document.getElementById('navbar-placeholder').innerHTML = data;
             })
             .catch(error => console.error('Error loading navbar:', error));
-
         /* document.getElementById("hamburger").onclick = function () {
             document.getElementById("nav-links").classList.toggle("active");
         }; */
-
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             var form = e.target;
@@ -99,7 +101,6 @@
             }
         });
     </script>
-   
 </body>
 
 </html>
