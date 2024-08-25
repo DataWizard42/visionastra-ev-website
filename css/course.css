@@ -382,8 +382,14 @@ header .nav-links {
         font-size: 2em;
     }
 
-    .pricing-info {
+    .pricing-info-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .course-image {
+        margin-bottom: 20px;
+        margin-right: 0;
     }
 
     .price, .learning-outcomes {
