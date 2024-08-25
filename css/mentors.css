@@ -9,10 +9,6 @@ body {
     background-color: #1c1c1c;
 }
 
-header .nav-links {
-    padding-top: 10px;
-}
-
 main{
     display: flex;
     justify-content: center;
