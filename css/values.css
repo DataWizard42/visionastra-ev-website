@@ -1,3 +1,4 @@
+/* Existing Desktop Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,7 +16,7 @@ body {
 }
 
 .navbar .logo {
-    height: 70px;
+    height: 80px; /* Increased size for better visibility */
 }
 
 .navbar nav ul {
@@ -112,8 +113,8 @@ body {
 }
 
 .value-box img {
-    width: 70px;
-    height: 70px;
+    width: 80px; /* Increased image size */
+    height: 80px; /* Increased image size */
     position: absolute;
     bottom: 20px; /* Adjusted image position */
 }
@@ -140,4 +141,100 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .values-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .value-box {
+        width: 45%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        height: 100px; /* Further increase for better visibility on smaller screens */
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-box {
+        width: 80%;
+    }
+
+    .value-box img {
+        width: 100px; /* Increase image size for smaller screens */
+        height: 100px; /* Increase image size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        height: 70px; /* Ensure the logo is appropriately sized for very small screens */
+    }
+
+    .navbar nav ul li a {
+        font-size: 18px;
+    }
+
+    .auth-buttons button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .values-section h1 {
+        font-size: 35px;
+    }
+
+    .value-box h2 {
+        font-size: 100px;
+    }
+
+    .value-box h3 {
+        font-size: 22px;
+    }
+
+    .value-box p {
+        font-size: 18px;
+    }
+
+    .value-box img {
+        width: 80px; /* Adjusted for very small screens */
+        height: 80px; /* Adjusted for very small screens */
+    }
 }
