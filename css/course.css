@@ -406,7 +406,7 @@ header .nav-links {
     }
 
     .course-content table {
-        width: 100%;
+        width: 90%;
         overflow-x: auto;
         border-collapse: collapse;
         margin-top: 20px;
