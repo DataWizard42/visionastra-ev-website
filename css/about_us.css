@@ -66,6 +66,7 @@ header .nav-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
     align-items: center; /* Center align the text horizontally */
     color: white; /* White text color */
     padding: 1rem;
@@ -82,7 +83,7 @@ header .nav-links {
 
 .glass-panel h3 {
     font-size: 39px;
-    margin-bottom: 29rem;
+    margin-bottom: 25rem;
 }
 
 .glass-panel p:first-of-type {
@@ -132,7 +133,9 @@ header .nav-links {
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 80%;
+    width: 80%; /* Stack items on top of each other by default */
+    align-items: center;
+    gap: 20px;
 }
 
 .mission-vision div {
@@ -468,6 +471,10 @@ header .nav-links {
 
 /* Media Query for screens smaller than 768px width (Large Phones) */
 @media screen and (max-width: 768px) {
+    .horizontal {
+        flex-direction: column;
+    }
+
     .line {
         display: none;
     }
@@ -497,13 +504,17 @@ header .nav-links {
         text-align: center;
     }
 
+    .glass-panel h3 {
+        font-size: 39px;
+        margin-bottom: 40rem;
+    }
+
     .glass-panel p {
         font-size: 0.9rem;
     }
 
     .glass-panel p:first-of-type {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
+        font-size: 1rem;
         width: 100%;
         text-align: center;     
     }
