@@ -77,16 +77,6 @@ header {
 /* Media Queries for Responsiveness */
 @media (max-width: 992px) {
   .static-text .main-text {
-    font-size: 3rem;
-  }
-
-  .static-text .sub-text {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .static-text .main-text {
     font-size: 2.5rem;
   }
 
@@ -95,12 +85,22 @@ header {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .static-text .main-text {
     font-size: 2rem;
   }
 
   .static-text .sub-text {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .static-text .main-text {
+    font-size: 1.6rem;
+  }
+
+  .static-text .sub-text {
+    font-size: 0.8rem;
   }
 }
