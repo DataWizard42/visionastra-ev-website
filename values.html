@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Values</title>
     <link rel="stylesheet" href="css/values.css">
 </head>
+
 <body>
+
     <header>
-        <div class="navbar">
-            <img src="navbarcomp/evacapng.png" alt="Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="course.html">Courses</a></li>
-                    <li><a href="mentors.html">Mentors</a></li>
-                    <li><a href="placements.html">Placements</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            
-        </div>
+        <div id="navbar-placeholder"></div>
     </header>
-    
+
     <main>
         <section class="values-section">
             <h1>Our Values</h1>
@@ -30,29 +21,102 @@
                 <div class="value-box">
                     <h2>P</h2>
                     <h3>Placements:</h3>
-                    <p>Ensuring students secure top industry positions through robust placement support and industry connections.</p>
+                    <p>Ensuring students secure top industry positions through robust placement support and industry
+                        connections.</p>
                     <img src="image/graduation-icon.png" alt="Placements">
                 </div>
                 <div class="value-box">
                     <h2>L</h2>
                     <h3>Learning:</h3>
-                    <p>Offering comprehensive and cutting-edge learning programs to equip students with the latest knowledge and skills.</p>
+                    <p>Offering comprehensive and cutting-edge learning programs to equip students with the latest
+                        knowledge and skills.</p>
                     <img src="image/learning-icon.png" alt="Learning">
                 </div>
                 <div class="value-box">
                     <h2>U</h2>
                     <h3>Upskill:</h3>
-                    <p>Providing opportunities for continuous upskilling to keep students ahead in their careers with advanced training modules.</p>
+                    <p>Providing opportunities for continuous upskilling to keep students ahead in their careers with
+                        advanced training modules.</p>
                     <img src="image/upskill-icon.png" alt="Upskill">
                 </div>
                 <div class="value-box">
                     <h2>S</h2>
                     <h3>Salary:</h3>
-                    <p>Empowering students to achieve high salaries by preparing them with the skills and expertise that top employers seek.</p>
+                    <p>Empowering students to achieve high salaries by preparing them with the skills and expertise that
+                        top employers seek.</p>
                     <img src="image/salary-icon.png" alt="Salary">
                 </div>
             </div>
         </section>
+
     </main>
+    <footer class="footer" style="padding-top: 35px;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <p style="color: white;">Empowering India’s talent to lead the global EV industry. <br><br>We
+                        are
+                        committed to bridging the gap between academia and industry, providing students with the
+                        practical skills and knowledge
+                        required to excel in the EV sector. Our programs are designed to foster innovation,
+                        entrepreneurship, and a deep understanding of the EV ecosystem.
+                    </p>
+                </div>
+                <div class="col-md-2 secpart">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled listone">
+                        <li><a href="about_us.html">About US</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="placements.html">Placements</a></li>
+                        <li><a href="mentors.html">Mentors</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 thirdpart">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled listtwo">
+                        <li><a href="https://www.instagram.com/evacademy.in/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/va-ev-academy/?viewAsMember=true">linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="color: white; border-color: white;">
+            <div class="row">
+
+                <div class="col-12 text-left last">
+
+                    <div class="lalala"><img class="lastimg" src="image/bwvasev.png" alt="">
+                        <p style="color: white;" class="mb-0 latext">© 2024 visionastraa. All rights reserved.</p>
+                    </div>
+
+
+                    <div><button class="lastb" type="button">EV academy </button></div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('navbarcomp/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // JavaScript to handle hamburger menu toggle
+                const hamburger = document.getElementById("hamburger");
+                const navLinks = document.getElementById("nav-links");
+
+                if (hamburger && navLinks) {
+                    hamburger.onclick = function () {
+                        navLinks.classList.toggle("active");
+                    };
+                }
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
+
 </html>
