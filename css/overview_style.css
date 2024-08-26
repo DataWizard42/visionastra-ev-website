@@ -71,7 +71,9 @@ main {
 }
 .stat-container {
   display: flex;
-  justify-content: center; /* Center the items horizontally */
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%; /* Center the items horizontally */
   gap: 20px; /* Optional: Add some space between the items */
 }
 
@@ -85,6 +87,7 @@ main {
   justify-content: center;
   align-items: center;
   color: white;
+
   border-radius: 2px;
   border: 0.5px solid white;
 }
