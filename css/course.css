@@ -79,35 +79,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* Course Information */
-.course-info {
-    background-color: #202020;
-    padding: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    transition: transform 0.1s ease, box-shadow 0.3s ease;
-}
-.course-info:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px #876eea;
-}
-
-.course-info h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.course-info p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.course-info .batch-timings {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
 /* Contact Us Button */
 .contact-us {
     background-color: #fff;
@@ -136,15 +107,17 @@ main {
     border-radius: 10px;
     transition: transform 0.1s ease, box-shadow 0.3s ease
 }
-.pricing-info-container:hover{
-    box-shadow: 0 0 10px #876eea;
-}
 
 .pricing-info-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.pricing-info:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #876eea;
 }
 
 .course-image {
@@ -172,6 +145,56 @@ main {
     line-height: 1.6;
 }
 
+/* Combined Course and Pricing Section */
+.course-info {
+    position: relative;
+    background: url('../image/course_img.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient Overlay */
+.course-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.course-pricing-info {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.course-info:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #876eea;
+}
+
+.course-pricing-info h2 {
+    font-size: 28px;
+}
+
+.course-pricing-info h3 {
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.course-pricing-info p {
+    font-size: 16px;
+    max-width: 600px;
+}
+
 /* Apply Button */
 .register-course {
     background-color: #fff;
@@ -192,14 +215,9 @@ main {
 }
 
 .pricing-learning-outcomes {
-    background-color: #282828;
-    padding: 20px;
+    background-color: #202020;
     border-radius: 10px;
     transition: transform 0.1s ease, box-shadow 0.3s ease;
-}
-.pricing-learning-outcomes:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px #876eea;
 }
 
 .pricing-learning-outcomes h2 {
