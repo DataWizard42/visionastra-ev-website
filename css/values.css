@@ -7,9 +7,9 @@ body {
 }
 
 .values-section h1 {
-  font-size: 50px; /* Increased font size */
-  margin-bottom: -100px; /* Overlaps with the boxes below */
   z-index: 1;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .values-container {
@@ -19,6 +19,7 @@ body {
   max-width: 100%;
   position: relative;
   z-index: 0;
+  margin-top: 100px;
 }
 
 .value-box {
@@ -71,12 +72,29 @@ body {
   background-color: #449d44;
 }
 
+.values-section h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.value-box {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.values-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 /* Ensuring no white space at the bottom */
 body,
 html {
   height: 100%;
 }
 
+.valuesicons {
+  margin-top: 90px;
+  font-size: 3rem;
+}
 main {
   min-height: 100vh;
   display: flex;
@@ -116,6 +134,12 @@ main {
 @media (max-width: 480px) {
   .values-section h1 {
     font-size: 35px;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .values-container {
+    margin-top: 10px;
   }
 
   .value-box h2 {
@@ -126,13 +150,13 @@ main {
     font-size: 22px;
   }
 
+  .value-box {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    height: fit-content;
+  }
   .value-box p {
     font-size: 18px;
-  }
-
-  .value-box img {
-    width: 80px; /* Adjusted for very small screens */
-    height: 80px; /* Adjusted for very small screens */
   }
 }
 /* footerstyle */
@@ -216,6 +240,11 @@ main {
     margin-top: 600px;
   }
 
+  .values-section h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 2px;
+  }
   .suntext p {
     font-size: 4em;
   }
