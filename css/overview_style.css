@@ -91,7 +91,6 @@ main {
   justify-content: center;
   align-items: center;
   color: white;
-
   border-radius: 2px;
   border: 0.5px solid white;
 }
@@ -102,7 +101,7 @@ main {
 }
 
 .stat p {
-  margin-top: 20px; /* Add spacing between h3 and p if needed */
+  margin-top: 4px; /* Add spacing between h3 and p if needed */
 }
 
 @media screen and (max-width: 1000px) {
