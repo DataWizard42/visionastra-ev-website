@@ -164,11 +164,19 @@ main {
   background-color: #23272a;
   color: #008000;
   padding: 10px 150px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .footer a {
   color: #ffffff;
   text-decoration: none;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .footer .secpart {
