@@ -148,7 +148,7 @@ main {
 /* Combined Course and Pricing Section */
 .course-info {
     position: relative;
-    background: url('../image/course_img.jpg') no-repeat center center;
+    background: url('../image/course.png') no-repeat center center;
     background-size: cover;
     padding: 40px;
     margin-top: 30px;
